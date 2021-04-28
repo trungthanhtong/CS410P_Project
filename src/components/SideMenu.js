@@ -35,23 +35,29 @@ export default function SideMenu() {
             <div className="logo" />
             <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
                 <Menu.Item key="1" icon={<PieChartOutlined />}>
-                    Option 1
+                    Most popular game
                 </Menu.Item>
                 <Menu.Item key="2" icon={<DesktopOutlined />}>
-                    Option 2
+                    Highest value game
                 </Menu.Item>
-                <SubMenu key="sub1" icon={<UserOutlined />} title="User">
-                    <Menu.Item key="3">Tom</Menu.Item>
-                    <Menu.Item key="4">Bill</Menu.Item>
-                    <Menu.Item key="5">Alex</Menu.Item>
-                </SubMenu>
-                <SubMenu key="sub2" icon={<TeamOutlined />} title="Team">
-                    <Menu.Item key="6">Team 1</Menu.Item>
-                    <Menu.Item key="8">Team 2</Menu.Item>
-                </SubMenu>
-                <Menu.Item key="9" icon={<FileOutlined />}>
-                    Files
+                <Menu.Item key="3" icon={<DesktopOutlined />}>
+                    Most cheated game
                 </Menu.Item>
+                <Menu.Item key="4" icon={<DesktopOutlined />}>
+                    Most trending game on Twitter
+                </Menu.Item>
+                <Menu.Item key="5" icon={<DesktopOutlined />}>
+                    Most played game
+                </Menu.Item>
+                <SubMenu key="sub1" icon={<UserOutlined />} title="Most played game by categories">
+                    <Menu.Item key="6">Action</Menu.Item>
+                    <Menu.Item key="7">Adventure</Menu.Item>
+                    <Menu.Item key="8">Role-playing</Menu.Item>
+                    <Menu.Item key="9">Simulation</Menu.Item>
+                    <Menu.Item key="10">Strategy</Menu.Item>
+                    <Menu.Item key="11">Sports</Menu.Item>
+                    <Menu.Item key="12">Puzzle</Menu.Item>
+                </SubMenu>
             </Menu>
         </Sider>
     );
