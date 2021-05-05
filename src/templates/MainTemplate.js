@@ -21,8 +21,8 @@ export default function MainTemplate(props) {
                         >
                             <Header
                                 className="site-layout-background"
-                                style={{ padding: 0 }}
-                            />
+                                style={{ padding: '0 50px' }}
+                            >Header</Header>
                             <Content
                                 style={{
                                     margin: "24px 16px 0",
@@ -33,7 +33,7 @@ export default function MainTemplate(props) {
                                     className="site-layout-background"
                                     style={{ padding: 24 }}
                                 >
-                                  <Component {...restRoute}/>
+                                  <Component {...propsRoute}/>
                                 </div>
                             </Content>
                         </Layout>

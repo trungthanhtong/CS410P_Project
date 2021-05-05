@@ -16,11 +16,9 @@ export default function SideMenu(props) {
         collapsed: false,
     });
 
-    const toggle = () => {
-        setState({
-            collapsed: !state.collapsed,
-        });
-    };
+    const onCollapse = collapsed => {
+        setState({ collapsed });
+      };
 
     return (
             <Sider
@@ -32,6 +30,7 @@ export default function SideMenu(props) {
                 }}
                 collapsible
                 collapsed={state.collapsed}
+                onCollapse={onCollapse}
             >
                 <div className="logo" />
                 <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
