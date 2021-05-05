@@ -5,6 +5,8 @@ import { Layout } from "antd";
 
 const { Header, Content } = Layout;
 
+
+// MAIN TEMPLATE FOR THE PROJECT
 export default function MainTemplate(props) {
     let { Component, ...restRoute } = props;
 
