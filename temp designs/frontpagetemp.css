@@ -1,0 +1,169 @@
+/* Add your code here */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+=======================reset ends here===================
+*/
+
+
+.heading{
+    background-color: rgb(53, 53, 53);
+    text-align: center;
+    color: white;
+    padding: 1em;
+    font-size: larger;
+}
+
+.container{
+    height: 100vh;
+}
+
+.left-body{
+    background-color: rgb(53, 53, 53);
+    height: 100%;
+    color: white;
+    float: left;
+    width: 10%;
+}
+
+.left-nav-ul{
+    padding-left: 0.5em;
+    height: 100%;
+}
+
+.boxes{
+    background-color: darkgray;
+    margin: 0.5em;
+    border: 1px solid;
+}
+
+
+
+/*
+RESPONSIVE COL SELECTION FOR THE DEATH
+*/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+/**/ 
+
+
+/*GRID STUFF*/ 
+.highest { grid-area: h; }
+.current { grid-area: c; }
+.game { grid-area: g; }
+.trending { grid-area: t; }
+.most { grid-area: m; }
+.four { grid-area: f; height: 100vh;}
+
+.highest, .current, .game, .trending, .most, .four{
+    padding: 0.5em;
+}
+
+.inner{
+    border: 1px solid;
+    height: 100%;
+}
+
+.right-body{
+    background-color: lightgray;
+    width: 90%;
+    float: left;
+    display: grid;
+    grid-gap: 5px;
+    padding: 0 10px 0 10px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+      "h h h t t t t t f f"
+      "h h h t t t t t f f"
+      "c c c m m m m m f f"
+      "g g g m m m m m f f"
+      ;
+
+    
+    
+}
+
+/*================*/
+
+
+
+
+
+@media screen and (max-width: 800px) {
+
+    /* categories for mobile screen */
+    
+}
+
+@media screen and (min-width: 801px) and (max-width: 1300px) {
+
+    /* categories for tablet screen */
+    
+}
