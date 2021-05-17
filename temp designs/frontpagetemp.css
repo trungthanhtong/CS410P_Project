@@ -123,7 +123,7 @@ RESPONSIVE COL SELECTION FOR THE DEATH
 .four { grid-area: f; height: 100vh;}
 
 .highest, .current, .game, .trending, .most, .four{
-    padding: 0.5em;
+    padding: 1em;
 }
 
 .inner{
@@ -136,8 +136,6 @@ RESPONSIVE COL SELECTION FOR THE DEATH
     width: 90%;
     float: left;
     display: grid;
-    grid-gap: 5px;
-    padding: 0 10px 0 10px;
     grid-auto-rows: minmax(100px, auto);
     grid-template-areas:
       "h h h t t t t t f f"
