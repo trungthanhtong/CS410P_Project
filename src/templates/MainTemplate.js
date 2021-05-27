@@ -23,8 +23,13 @@ export default function MainTemplate(props) {
                         >
                             <Header
                                 className="site-layout-background"
-                                style={{ padding: '0 50px' }}
-                            >Header</Header>
+                                style={
+                                    { 
+                                      padding: '0 50px',
+                                      background: "#001529"
+                                    }
+                                }
+                            ></Header>
                             <Content
                                 style={{
                                     margin: "24px 16px 0",

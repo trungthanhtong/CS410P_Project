@@ -27,6 +27,7 @@ export default function SideMenu(props) {
                     height: "100vh",
                     position: "fixed",
                     left: 0,
+                    padding: "60px 0"
                 }}
                 collapsible
                 collapsed={state.collapsed}
