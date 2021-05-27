@@ -38,19 +38,32 @@ class SteamStat extends React.Component {
 
     componentDidMount() {
         const apiFetch = async () => {
-            let response = await getGames("http://steamtistics-be.herokuapp.com/game/most-played/5");
-            let popular_games = response.data
-            
-            let names = []
+            let popular_response = await getGames("http://steamtistics-be.herokuapp.com/game/most-played/5")
+            let popular_games = popular_response.data
+            let reviewed_response = await getGames("http://steamtistics-be.herokuapp.com/game/most-reviewed/5")
+            let reviewed_games = reviewed_response.data
+
+            console.log(reviewed_games)
+
+            let popular_names = []
             let hours = []
             
             for (let i = 0; i < popular_games.length; i++) {
-                names.push(popular_games[i].title)
+                popular_names.push(popular_games[i].title)
                 hours.push(popular_games[i].hours_played)
             }
+
+            let  reviewed_names = []
+            let reviews = []
+
+            for (let i = 0; i < reviewed_games.length; i++) {
+                reviewed_names.push(reviewed_games[i].title)
+                reviews.push(reviewed_games[i].reviews)
+            }
+
             this.setState({
-                chartState: {
-                    labels: names,
+                popularChartState: {
+                    labels: popular_names,
                     datasets: [
                         {
                             label: "Top 5 Most Played Games",
@@ -59,8 +72,21 @@ class SteamStat extends React.Component {
                             data: hours
                         }
                     ]
+                },
+                reviewChartState: {
+                    labels: reviewed_names,
+                    datasets: [
+                        {
+                            label: "Top 5 Most Reviewed Games",
+                            backgroundColor: backgroundColors,
+                            borderColor: borderColors,
+                            data: reviews
+                        }
+                    ]
                 }    
             });
+
+
         }
         apiFetch();
     }
@@ -69,11 +95,25 @@ class SteamStat extends React.Component {
         return (
 
             <div>
-                <h1>Most Played Games</h1>
                 <div className="chart-container">
+                    <h1>Most Played Games</h1>
                     {Object.keys(this.state).length &&
                     <Bar
-                        data={this.state.chartState}
+                        data={this.state.popularChartState}
+                        options={{
+                            legend:{
+                                display:true,
+                                position:'bottom'
+                            }
+                        }}
+                    />
+                    }
+                </div>
+                <div className="chart-container">
+                    <h1>Most Reviewed Games</h1>
+                    {Object.keys(this.state).length &&
+                    <Bar
+                        data={this.state.reviewChartState}
                         options={{
                             legend:{
                                 display:true,
