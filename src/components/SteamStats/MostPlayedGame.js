@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Bar, Doughnut } from "react-chartjs-2";
 import { useDispatch, useSelector } from "react-redux";
+import { getMostPlayedGames } from "../../redux/actions/StatActions";
 import { GET_MOST_PLAYED_GAMES } from "../../redux/constants/GameConstants";
 import {
     backgroundColors,
@@ -24,10 +25,11 @@ export default function MostPlayedGame() {
     }
 
     useEffect(() => {
-        dispatch({
-            type: GET_MOST_PLAYED_GAMES,
-            limit,
-        });
+        dispatch(getMostPlayedGames(limit));
+    }, []);
+
+    useEffect(() => {
+        dispatch(getMostPlayedGames(limit));
     }, [dispatch, limit]);
 
     return (

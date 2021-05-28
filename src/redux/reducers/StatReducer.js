@@ -1,8 +1,9 @@
+import MostPlayedGame from "../../components/SteamStats/MostPlayedGame";
 import { SET_STAT_COMPONENT } from "../constants/StatConstants";
 
 /* eslint-disable import/no-anonymous-default-export */
 const initialState = {
-    Component: "",
+    Component: <MostPlayedGame/>,
 };
 
 export default (state = initialState, action) => {
