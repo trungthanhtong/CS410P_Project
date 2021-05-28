@@ -20,8 +20,10 @@ export default function MostReviewedGame() {
 
     for (const [key, value] of Object.entries(mostReviewedGames)) {
         label.push(value.title);
-        data.push(value.hours_played);
+        data.push(value.reviews);
     }
+
+    console.log(mostReviewedGames);
 
     useEffect(() => {
         dispatch({
