@@ -1,0 +1,1 @@
+export const SET_STAT_COMPONENT = 'SET_STAT_COMPONENT'
