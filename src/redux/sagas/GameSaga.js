@@ -19,7 +19,7 @@ function * getMostPlayedGames(action) {
 
 function * getMostReviewedGames(action) {
     try {
-        const {data, status} = yield call(() => SteamService.getMostPlayedGames(action.limit));
+        const {data, status} = yield call(() => SteamService.getMostReviewedGames(action.limit));
         console.log(status)
         if (status === STATUS_CODE.SUCCESS) {
             yield put({
