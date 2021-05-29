@@ -30,7 +30,7 @@ function intro() {
         <div className="welcome">
           <h1>SteamStastic</h1>
           <h2>Where stats comes to life</h2>
-          <Link style={navss} to='/help'>
+          <Link style={navss} to='/'>
                 <h3>Press here to continue to stats</h3>
             </Link>
         </div>
