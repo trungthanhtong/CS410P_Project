@@ -3,6 +3,8 @@ import Nav from "../Nav/Nav";
 import "./../../App.css";
 import logo from "./intro_logo.gif";
 import title from "./steamtistic.png";
+import Intro_title from "./intro_title";
+import About from "./about";
 import { Link } from "react-router-dom";
 
 function intro() {
@@ -28,16 +30,7 @@ function intro() {
                         </div>
                         
                         <div className="col-sm-6 welcome-container">
-                            
-                            <div className="welcome text-center">
-                                <img
-                                    className="w-100"
-                                    src={title}
-                                    alt="steamstats_title"
-                                />
-                                <h2 className="text-white mt-n">Where stats comes to life</h2>
-                                <Link to="/steamstat" className="btn btn-success">Get Started</Link>
-                            </div>
+                            <Intro_title />
                         </div>
                     </div>
                 </div>
