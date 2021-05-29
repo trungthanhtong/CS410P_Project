@@ -19,7 +19,7 @@ function intro() {
             <div className="gradient">
                 <div className="container">
                     <div className="row">
-                        <div className="col-6">
+                        <div className="col-sm-6">
                             <img
                                 className="w-100 mt-5"
                                 src={logo}
@@ -27,15 +27,15 @@ function intro() {
                             />
                         </div>
                         
-                        <div className="col-6 welcome-container">
+                        <div className="col-sm-6 welcome-container">
                             
                             <div className="welcome text-center">
                                 <img
-                                    className="w-100 mt-5"
+                                    className="w-100"
                                     src={title}
                                     alt="steamstats_title"
                                 />
-                                <h2 className="text-white pad">Where stats comes to life</h2>
+                                <h2 className="text-white mt-n">Where stats comes to life</h2>
                                 <Link to="/steamstat" className="btn btn-success">Get Started</Link>
                             </div>
                         </div>
