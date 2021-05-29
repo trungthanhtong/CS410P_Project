@@ -1,13 +1,16 @@
 import './../../App.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SizeContext from 'antd/lib/config-provider/SizeContext';
 
 
 function Nav() {
 
   const navss = {
       color: 'white',
-      textDecoration: 'none'
+      textDecoration: 'none',
+      fontSize: 'large',
+      paddingTop: '10px'
   };
 
 
@@ -15,13 +18,13 @@ function Nav() {
     <nav>
         <ul className="navs">
             <Link style={navss} to='/'>
-                <li>SteamStats</li>
+                <li>Help</li>
             </Link>
             <Link style={navss} to='/place1'> 
-                <li>link to ....</li>
+                <li>About SteamStats</li>
             </Link>
             <Link style={navss} to='/place2'>
-                <li>another link to...</li>
+                <li>Contact Us</li>
             </Link>
             
         </ul>

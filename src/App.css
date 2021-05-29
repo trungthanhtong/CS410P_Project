@@ -7,6 +7,25 @@
   pointer-events: none;
 }
 
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: gray;
+  color: white;
+}
+
+.navs{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 100%; 
+}
+
+.gradient{
+  background-image: linear-gradient(to right, white , #001529)
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -36,3 +55,4 @@
     transform: rotate(360deg);
   }
 }
+
