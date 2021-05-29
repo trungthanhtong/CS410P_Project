@@ -13,9 +13,8 @@ function App() {
   return (
     <BrowserRouter>
     <Switch>
-      <MainTemplate exact path="/" Component={SteamStatPage}/>
-      <MainTemplate exact path="/most-played" Component={MostPlayedGame} />
-      <Route path="/intro" component={intro}/>
+      <MainTemplate exact path="/steamstat" Component={SteamStatPage}/>
+      <Route path="/" component={intro}/>
     </Switch>
     </BrowserRouter>
 

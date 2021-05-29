@@ -1,0 +1,42 @@
+nav {
+    display: flex;
+    background-color: rgb(90, 90, 90);
+    color: white;
+    align-items: center;
+    height: 70px;
+}
+
+.navs {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    width: 100%;
+    margin-right: 30px;
+    align-items: center;
+    margin: 0;
+}
+
+.navs li {
+  margin: 0 20px;
+}
+
+.navs li a:hover {
+  color: rgb(142, 241, 142) !important;
+}
+
+.gradient {
+    background-image: linear-gradient(to right, white, #001529);
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+}
+
+.welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome {
+  color: white;
+}

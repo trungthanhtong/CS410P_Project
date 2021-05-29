@@ -7,7 +7,6 @@ export default function SteamStatPage() {
 
     return (
         <div>
-            {/* <Component/> */}
             {Component}
         </div>
     )
