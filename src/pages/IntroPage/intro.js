@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "../Nav/Nav";
 import "./../../App.css";
 import logo from "./intro_logo.gif";
+import title from "./steamtistic.png";
 import { Link } from "react-router-dom";
 
 function intro() {
@@ -25,9 +26,16 @@ function intro() {
                                 alt="steamstats_logo"
                             />
                         </div>
+                        
                         <div className="col-6 welcome-container">
+                            
                             <div className="welcome text-center">
-                                <h2 className="text-white">Where stats comes to life</h2>
+                                <img
+                                    className="w-100 mt-5"
+                                    src={title}
+                                    alt="steamstats_title"
+                                />
+                                <h2 className="text-white pad">Where stats comes to life</h2>
                                 <Link to="/steamstat" className="btn btn-success">Get Started</Link>
                             </div>
                         </div>
