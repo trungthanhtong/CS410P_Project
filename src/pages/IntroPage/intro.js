@@ -31,6 +31,9 @@ function intro() {
                         
                         <div className="col-sm-6 welcome-container">
                             <Intro_title />
+                            {/* <Intro_title />*/}
+                            {/* <contact />*/}
+                            
                         </div>
                     </div>
                 </div>
