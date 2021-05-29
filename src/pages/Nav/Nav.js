@@ -1,43 +1,73 @@
 import "./../../App.css";
-import React from "react";
+import React, {Component} from "react";
 import { Link } from "react-router-dom";
 import SizeContext from "antd/lib/config-provider/SizeContext";
 import "../../css/landingPage.css";
 
-function Nav() {
-    const navss = {
-        color: "white",
-        textDecoration: "none",
-        fontSize: "large",
-        paddingTop: "10px",
-    };
 
-    return (
-        <nav>
-            <ul className="navs">
-                <li>
-                    <Link style={navss} to="/about">
-                        About SteamStats
-                    </Link>
-                </li>
+export default class Nav extends Component{
 
-                <li>
-                    <Link style={navss} to="/contact">
-                        Contact Us
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        className="btn btn-success"
-                        style={navss}
-                        to="/steamstat"
-                    >
-                        Get Started
-                    </Link>
-                </li>
-            </ul>
-        </nav>
-    );
+
+    state = {
+        about: false,
+        contact: false,
+    }
+
+    showAbout = () =>{
+        this.setState({
+            about: true,
+            contact: false,
+        })
+        console.log("about:" + this.state.about);
+        console.log("contact:" + this.state.contact);
+    }
+
+    showContact = () =>{
+        this.setState({
+            about: false,
+            contact: true,
+        })
+        console.log("about:" + this.state.about);
+        console.log("contact:" + this.state.contact);
+    }
+
+
+    render(){
+
+        const navss = {
+            color: "white",
+            textDecoration: "none",
+            fontSize: "large",
+            paddingTop: "10px",
+        };
+
+        
+        return (
+            <nav>
+                <ul className="navs">
+                    <li>
+                        <Link style={navss} to="/about" onClick={this.showAbout}>
+                            About SteamStats
+                        </Link>
+                    </li>
+    
+                    <li>
+                        <Link style={navss} to="/contact" onClick={this.showContact}>
+                            Contact Us
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="btn btn-success"
+                            style={navss}
+                            to="/steamstat"
+                        >
+                            Get Started
+                        </Link>
+                    </li>
+                </ul>
+            </nav>
+        );
+
+    }
 }
-
-export default Nav;
