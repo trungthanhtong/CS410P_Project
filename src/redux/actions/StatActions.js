@@ -1,4 +1,7 @@
-import { GET_MOST_PLAYED_GAMES, GET_MOST_REVIEWED_GAMES } from "../constants/GameConstants";
+import { GET_MOST_PLAYED_GAMES, 
+         GET_MOST_REVIEWED_GAMES,
+         GET_FUNNIEST_REVIEWS,
+         GET_MOST_HELPFUL_REVIEWS } from "../constants/GameConstants";
 import { SET_STAT_COMPONENT } from "../constants/StatConstants";
 
 export const setStatComponent = (Component) => ({
@@ -16,4 +19,12 @@ export const getMostReviewedGames = (limit) => ({
     limit
 })
 
+export const getFunniestReviews = (limit) => ({
+    type: GET_FUNNIEST_REVIEWS,
+    limit
+})
 
+export const getMostHelpfulReviews = (limit) => ({
+    type: GET_MOST_HELPFUL_REVIEWS,
+    limit
+})
