@@ -17,13 +17,13 @@ function Nav() {
   return (
     <nav>
         <ul className="navs">
-            <Link style={navss} to='/'>
+            <Link style={navss} to='/help'>
                 <li>Help</li>
             </Link>
-            <Link style={navss} to='/place1'> 
+            <Link style={navss} to='/about'> 
                 <li>About SteamStats</li>
             </Link>
-            <Link style={navss} to='/place2'>
+            <Link style={navss} to='/contact'>
                 <li>Contact Us</li>
             </Link>
             
