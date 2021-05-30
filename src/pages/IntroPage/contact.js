@@ -1,6 +1,6 @@
 import React from "react";
 import "./../../App.css";
-import title from "./about.png";
+import title from "./contact.png";
 import { Link } from "react-router-dom";
 
 function About() {
@@ -10,7 +10,7 @@ function About() {
             <img
                  className="w-100"
                 src={title}
-                 alt="steamstats_about_title"
+                 alt="steamstats_contact_title"
             />
             <h3>Very nice and good place to play</h3>
         </div>
