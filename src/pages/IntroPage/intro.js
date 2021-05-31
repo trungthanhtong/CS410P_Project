@@ -43,13 +43,21 @@ export default class intro extends Component{
                 contact: true,
             });  
         }
+        else{
+            this.setState({
+                intro: true,
+                about: false,
+                contact: false,
+            });
+        }
 
 
     }
 
+
+
     render(){
 
-        
         
 
         return (
@@ -59,11 +67,14 @@ export default class intro extends Component{
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-6">
-                                <img
-                                    className="w-100 mt-5"
+                                
+                                <img onClick={() => this.handler(0)}
+                                    className="w-100 mt-5 logo"
                                     src={logo}
                                     alt="steamstats_logo"
                                 />
+                                
+                                
                             </div>
                             
                             <div className="col-sm-6 welcome-container">

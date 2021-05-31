@@ -45,14 +45,14 @@ export default class Nav extends Component{
         return (
             <nav>
                 <ul className="navs">
-                    <li>
-                        <Link style={navss} to="/about" onClick={() => this.props.action(1)}>
+                    <li onClick={() => this.props.action(1)}>
+                        <Link style={navss} to="/about">
                             About SteamStats
                         </Link>
                     </li>
     
-                    <li>
-                        <Link style={navss} to="/contact" onClick={() => this.props.action(2)}>
+                    <li onClick={() => this.props.action(2)}>
+                        <Link style={navss} to="/contact">
                             Contact Us
                         </Link>
                     </li>

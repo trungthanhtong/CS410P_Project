@@ -12,6 +12,7 @@ function About() {
                 src={title}
                  alt="steamstats_contact_title"
             />
+            
             <h3>Very nice and good place to play</h3>
         </div>
     );
