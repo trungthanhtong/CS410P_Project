@@ -11,11 +11,11 @@ class steamService extends baseService{
     }
 
     getFunniestReviews = (limit) => {
-        return this.get(`game/review/funny/${limit}`)
+        return this.get(`review/funny/${limit}`)
     }
 
     getMostHelpfulReviews = (limit) => {
-        return this.get(`game/review/helpful/${limit}`)
+        return this.get(`review/helpful/${limit}`)
     }
 }
 

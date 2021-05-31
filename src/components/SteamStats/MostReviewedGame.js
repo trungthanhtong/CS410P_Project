@@ -19,6 +19,8 @@ export default function MostReviewedGame() {
     const label = [];
     const data = [];
 
+    console.log(mostReviewedGames);
+
     for (const [key, value] of Object.entries(mostReviewedGames)) {
         label.push(value.title);
         data.push(value.reviews);

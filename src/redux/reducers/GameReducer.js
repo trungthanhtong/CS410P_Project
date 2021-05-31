@@ -8,7 +8,7 @@ const initialState = {
     mostPlayedGames: [],
     mostReviewedGames: [],
     funniestReviews: [],
-    mostHelpfulReviews: []
+    mostHelpfulReviews: [],
 }
 
 export default (state = initialState, action) => {
