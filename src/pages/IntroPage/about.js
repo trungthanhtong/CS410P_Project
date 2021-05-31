@@ -6,13 +6,15 @@ import { Link } from "react-router-dom";
 function About() {
     
     return (
-        <div>
+        <div className="text-center">
             <img
                  className="w-100"
                 src={title}
                  alt="steamstats_about_title"
             />
-            <h3>Very nice and good place to play</h3>
+            <h4 className="text-white mt-n"><b>Purpose:</b> We wish to share information about game in 
+            which will help in your decision when planning to find or buy a new game on the Steam gaming
+            platform</h4>
         </div>
     );
 }

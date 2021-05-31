@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import Nav from "../Nav/Nav";
 import "./../../App.css";
-import logo from "./intro_logo.gif";
+import logo from "./intro_logooo.gif";
 import title from "./steamtistic.png";
 import Intro_title from "./intro_title";
 import About from "./about";
