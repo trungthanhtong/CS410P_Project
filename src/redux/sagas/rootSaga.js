@@ -5,5 +5,7 @@ export function * rootSaga() {
     yield all([
         GameSaga.watchingGetMostPlayedGames(),
         GameSaga.watchingGetMostReviewedGames(),
+        GameSaga.watchingGetFunniestReviews(),
+        GameSaga.watchingGetMostHelpfulReviews(),
     ])
 }
