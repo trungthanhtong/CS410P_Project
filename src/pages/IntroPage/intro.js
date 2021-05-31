@@ -6,6 +6,7 @@ import title from "./steamtistic.png";
 import Intro_title from "./intro_title";
 import About from "./about";
 import Contact from "./contact";
+import Thanks from "./thanks";
 import { Link } from "react-router-dom";
 
 
@@ -16,6 +17,7 @@ export default class intro extends Component{
         intro: true,
         about: false,
         contact: false,
+        form_s: false,
     }
 
     constructor(props){
@@ -34,6 +36,7 @@ export default class intro extends Component{
                 intro: false,
                 about: true,
                 contact: false,
+                form_s: false,
             });
         }
         else if(arg === 2){
@@ -41,6 +44,15 @@ export default class intro extends Component{
                 intro: false,
                 about: false,
                 contact: true,
+                form_s: false,
+            });  
+        }
+        else if(arg === 3){
+            this.setState({
+                intro: false,
+                about: false,
+                contact: false,
+                form_s: true,
             });  
         }
         else{
@@ -48,6 +60,7 @@ export default class intro extends Component{
                 intro: true,
                 about: false,
                 contact: false,
+                form_s: false,
             });
         }
 
@@ -63,9 +76,9 @@ export default class intro extends Component{
         return (
             <div>
                 <Nav action={this.handler}/>
-                <div className="gradient">
-                    <div className="container">
-                        <div className="row">
+                <div className="gradient" action={this.handler}>
+                    <div className="container" action={this.handler}>
+                        <div className="row" action={this.handler}>
                             <div className="col-sm-6 d-none d-sm-block">
                                 
                                 <img onClick={() => this.handler(0)}
@@ -77,10 +90,11 @@ export default class intro extends Component{
                                 
                             </div>
                             
-                            <div className="col-sm-6 welcome-container">
+                            <div className="col-sm-6 welcome-container" action={this.handler}>
                                 {this.state.intro === true && <Intro_title />}
                                 {this.state.about === true && <About />}
-                                {this.state.contact === true && <Contact />}
+                                {this.state.contact === true && <Contact action={this.handler}/>}
+                                {this.state.form_s === true && <Thanks />}
                                 
                         
                             </div>

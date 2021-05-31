@@ -71,6 +71,15 @@ nav {
   animation-iteration-count:infinite;
 }
 
+.lb{
+  font-size: x-large;
+  margin-top: 20px;
+}
+
+.bt{
+  margin-top: 20px;
+  width: 50%;
+}
 @keyframes wobble {
 
   
