@@ -66,7 +66,7 @@ export default class intro extends Component{
                 <div className="gradient">
                     <div className="container">
                         <div className="row">
-                            <div className="col-sm-6">
+                            <div className="col-sm-6 d-none d-sm-block">
                                 
                                 <img onClick={() => this.handler(0)}
                                     className="w-100 mt-5 logo"
@@ -82,9 +82,7 @@ export default class intro extends Component{
                                 {this.state.about === true && <About />}
                                 {this.state.contact === true && <Contact />}
                                 
-                                {/* <Intro_title />*/}
-                                {/* <contact />*/}
-                                
+                        
                             </div>
                         </div>
                     </div>

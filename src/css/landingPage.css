@@ -25,7 +25,7 @@ nav {
 }
 
 .navs li:last-child{
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 .navs li:hover{
@@ -48,6 +48,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .welcome {
@@ -56,4 +57,36 @@ nav {
 
 .mt-n{
   margin-top: -1.5rem;
+}
+
+
+.logoo{
+  box-shadow: inset 0 0 100px 1px, 0 0 500px 1px;
+  border-radius: 800px;
+  margin-bottom: 50px;
+}
+
+.logo:hover {
+  animation: wobble 1s 1;
+  animation-iteration-count:infinite;
+}
+
+@keyframes wobble {
+
+  
+  50% {
+    transform: scale(1.05);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .mobile_view{
+    border: 1px solid;
+    padding: 30px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 20px;
+  }
 }
