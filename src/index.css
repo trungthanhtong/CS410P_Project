@@ -19,3 +19,10 @@
 .site-layout .site-layout-background {
   background: #fff;
 }
+
+.h-logo{
+  max-width: 180px;
+  height: auto;
+  margin-top: -60px;
+  margin-left: 6px;
+}
