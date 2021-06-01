@@ -80,22 +80,9 @@ export default function MainTemplate(props) {
                                 >
                                     Best Reviews
                                 </Menu.Item>
-                                <Menu.Item key="4" icon={<DesktopOutlined />}>
+                                {/* <Menu.Item key="4" icon={<DesktopOutlined />}>
                                     Most helpful reviews
-                                </Menu.Item>
-                                {/* <SubMenu
-                        key="sub1"
-                        icon={<UserOutlined />}
-                        title="Most played game by categories"
-                    >
-                        <Menu.Item key="6">Action</Menu.Item>
-                        <Menu.Item key="7">Adventure</Menu.Item>
-                        <Menu.Item key="8">Role-playing</Menu.Item>
-                        <Menu.Item key="9">Simulation</Menu.Item>
-                        <Menu.Item key="10">Strategy</Menu.Item>
-                        <Menu.Item key="11">Sports</Menu.Item>
-                        <Menu.Item key="12">Puzzle</Menu.Item>
-                    </SubMenu> */}
+                                </Menu.Item> */}
                             </Menu>
                         </Sider>
                         <Layout className="site-layout">

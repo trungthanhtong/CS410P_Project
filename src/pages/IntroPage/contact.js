@@ -1,85 +1,103 @@
-import React, {Component}  from "react";
+import React, { Component, useState } from "react";
 import "./../../App.css";
 import title from "./contact.png";
+import style from "../../css/input.module.css";
+import Input from "../../components/Input/Input";
 
+export default function ContactForm() {
+    const [state, setState] = useState({
+        values: {
+            name: "",
+            email: "",
+            message: "",
+        },
+        errors: {
+            name: "",
+            email: "",
+        },
+    });
 
-
-export default class About extends Component{
-
-    state = {
-        name: "",
-        email: "",
-        ta: "",
+    const handleChange = (e) => {
+        let { name, value } = e.target;
+        let newValues = { ...state.values, [name]: value };
+        let newErrors = { ...state.errors };
+        if (value.trim() === "") {
+            newErrors[name] = style.inputBox;
+        } else {
+            newErrors[name] = "";
+        }
+        if (name === "email") {
+            const re =
+                /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+            re.test(value.toLowerCase())
+                ? (newErrors[name] = "")
+                : (newErrors[name] = style.inputBox);
+        }
+        setState({
+            ...state,
+            values: { ...newValues },
+            errors: { ...newErrors },
+        });
     };
 
-    updateState = (newState) => {
-        this.setState(newState);
-    }
+    const handleSubmit = () => {};
 
-    clear_form = () => {
-        this.setState({
-            name:"",
-            email: "",
-            ta:"",
-        });
-      }
-
-    render(){
-        
-        return (
-
-            
-            
-            <div>
-                <img
-                     className="w-100"
-                    src={title}
-                     alt="steamstats_contact_title"
+    return (
+        <form>
+            <img className="w-100" src={title} alt="steamstats_contact_title" />
+            <div class="form-group">
+                <p className="text-white">Name</p>
+                <Input
+                    type="text"
+                    name="name"
+                    inputBox={state.errors.name}
+                    handleChange={handleChange}
                 />
-                <div class="form-group">
-                    <label for="nm" className="lb">Name:</label>
-                    <input 
-                        type="text" 
-                        class="form-control" 
-                        id="nm"
-                        defaultValue=""
-                        value={this.state.name}
-                        onChange={(e) => this.updateState({name: e.target.value})}
-                    />
-                </div>
-    
-                <div class="form-group">
-                    <label for="em" className="lb">Email:</label>
-                    <input 
-                        type="text" 
-                        class="form-control" 
-                        id="em"
-                        defaultValue=""
-                        value={this.state.email}
-                        onChange={(e) => this.updateState({email: e.target.value})}
-                    />
-                </div>
-    
-                <div class="form-group">
-                    <label for="comment" className="lb">Tell us about why are you contacting us for..</label>
-                    <textarea 
-                        class="form-control" 
-                        rows="5" 
-                        id="comment"
-                        defaultValue=""
-                        value={this.state.ta}
-                        onChange={(e) => this.updateState({ta: e.target.value})}
-                    ></textarea>
-                    <span class="help-block text-white">Example: I encountered an error...</span>
-                </div>
-                <button type="button" class="btn btn-primary btn-lg btn-block bt" onClick={() => this.props.action(3)}>Submit</button>
-                <button type="button" class="btn btn-warning btn-lg btn-block bt" onClick={this.clear_form}>Reset</button>
-                
-            
-    
             </div>
-            
-        );
 
-    }
+            <div class="form-group">
+                <p className="text-white mt-3">Email</p>
+                <Input
+                    type="email"
+                    name="email"
+                    inputBox={state.errors.email}
+                    handleChange={handleChange}
+                />
+            </div>
+
+            <div class="form-group">
+                <p className="text-white mt-3">Tell us about why are you contacting us for..</p>
+                <textarea
+                    class="form-control"
+                    rows="5"
+                    value={state.values.message}
+                    onChange={(e) => {
+                        const newValues = {...state.values, message: e.target.value};
+                        setState({...state, values: newValues})
+                    }}
+                ></textarea>
+                <span class="help-block text-white">
+                    Example: I encountered an error...
+                </span>
+            </div>
+            <button
+                type="button"
+                class="btn btn-primary btn-lg btn-block bt"
+                onClick={handleSubmit}
+            >
+                Submit
+            </button>
+            <button
+                type="button"
+                class="btn btn-warning btn-lg btn-block bt"
+                type="reset"
+                onClick={() => {
+                    const newValues = {...state.values, message: ''};
+                        setState({...state, values: newValues})
+                }}
+            >
+                Reset
+            </button>
+        </form>
+    );
 }

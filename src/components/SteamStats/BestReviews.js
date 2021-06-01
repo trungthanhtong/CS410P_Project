@@ -22,8 +22,6 @@ export default function BestReviews() {
        dispatch(getMostHelpfulReviews(limit))
     }, [dispatch, limit]);
 
-    console.log(funniestReviews)
-    console.log(mostHelpfulReviews)
 
     const f_titles = [];
     const f_recommendations = [];
