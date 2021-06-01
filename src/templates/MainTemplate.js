@@ -13,6 +13,7 @@ import { setStatComponent } from "../redux/actions/StatActions";
 import MostPlayedGame from "../components/SteamStats/MostPlayedGame";
 import MostReviewedGame from "../components/SteamStats/MostReviewedGame";
 import BestReviews from "../components/SteamStats/BestReviews"
+import Logo from "./header-logo.png"
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -47,6 +48,11 @@ export default function MainTemplate(props) {
                             onCollapse={onCollapse}
                             style={{paddingTop:'60px'}}
                         >
+                            <img
+                                className="w-100 h-logo"
+                                src={Logo}
+                                 alt="steamstats_title"
+                                />
                             <div className="logo" />
                             <Menu
                                 theme="dark"
@@ -92,7 +98,8 @@ export default function MainTemplate(props) {
                                     padding: "0 50px",
                                     background: "#001529",
                                 }}
-                            ></Header>
+                            >
+                            </Header>
                             <Content style={{ margin: "0 16px" }}>
                                 <Component {...propsRoute} />
                             </Content>
