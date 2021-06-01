@@ -15,13 +15,14 @@ function About() {
             <div className="mobile_view">
             <h4 className="text-white"><b>Purpose:</b> We wish to share information about game in 
             which will help in your decision when planning to find or buy a new game on the Steam gaming
-            platform</h4>
+            platform.</h4>
 
-            <h5 className="text-white mt-5">We provide a variety of statistical information about game that are on the steam platform
-            based on many criteria such as, most played games, most revieved game.</h5>
+            <h5 className="text-white mt-5">We provide a range of information about game reviews on the Steam platform
+            based on many criteria to provide information about the most played games and most reviewed games.</h5>
 
-            <h5 className="text-white mt-5">We acknowledge that review plays a crucial part in deciding whether or not to get 
-            a particular game, therefore we also provide information for best and most helpful review.</h5>
+            <h5 className="text-white mt-5">Game reviews play a crucial part in deciding whether or not to get 
+            a particular game. Therefore, we also provide information about reviews. This includes information about
+            the funniest and most helpful reviews found on Steam.</h5>
             </div>
 
         </div>

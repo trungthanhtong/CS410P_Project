@@ -5,11 +5,16 @@
 }
 
 .funny-reviews, .helpful-reviews {
-    width: 100%;
+    width: 75%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
     height: 100%;
-    border: solid #001529 3px;
+    border: 3px inset rgb(122, 129, 136);
     border-radius: 10px;
     color: #001529;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    padding: 25px;
 }
 
 .review-text {
