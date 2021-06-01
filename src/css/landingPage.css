@@ -98,4 +98,8 @@ nav {
     background-color: rgba(0,0,0,0.5);
     border-radius: 20px;
   }
+
+  .navs li:last-child{
+    margin-left: 0px;
+  }
 }
