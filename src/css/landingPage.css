@@ -102,4 +102,10 @@ nav {
   .navs li:last-child{
     margin-left: 0px;
   }
+
+  
+  .navs li:nth-child(2){
+    margin-right: 40px;
+    margin-left: -20px;
+  }
 }
