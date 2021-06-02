@@ -14,6 +14,7 @@ export default function ContactForm() {
             name: "",
             email: "",
             message: "",
+            help:"Example: I encountered an error...",
         },
         errors: {
             name: "",
@@ -111,7 +112,7 @@ export default function ContactForm() {
                     }}
                 ></textarea>
                 <span class="help-block text-white">
-                    Example: I encountered an error...
+                    {state.values.help}
                 </span>
             </div>
             <button
