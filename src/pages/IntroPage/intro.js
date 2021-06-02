@@ -6,7 +6,6 @@ import title from "./steamtistic.png";
 import Intro_title from "./intro_title";
 import About from "./about";
 import Contact from "./contact";
-import Thanks from "./thanks";
 import { Link } from "react-router-dom";
 
 
@@ -90,11 +89,10 @@ export default class intro extends Component{
                                 
                             </div>
                             
-                            <div className="col-sm-6 welcome-container" action={this.handler}>
+                            <div className="col-sm-6 welcome-container">
                                 {this.state.intro === true && <Intro_title />}
                                 {this.state.about === true && <About />}
-                                {this.state.contact === true && <Contact action={this.handler}/>}
-                                {this.state.form_s === true && <Thanks />}
+                                {this.state.contact === true && <Contact/>}
                                 
                         
                             </div>
