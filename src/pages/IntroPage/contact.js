@@ -1,10 +1,14 @@
-import React, { Component, useState } from "react";
+import React, { Component, useRef, useState } from "react";
 import "./../../App.css";
 import title from "./contact.png";
 import style from "../../css/input.module.css";
 import Input from "../../components/Input/Input";
+import Swal from 'sweetalert2'
 
 export default function ContactForm() {
+
+    const resetBtn = useRef(null);
+
     const [state, setState] = useState({
         values: {
             name: "",
@@ -40,7 +44,37 @@ export default function ContactForm() {
         });
     };
 
-    const handleSubmit = () => {};
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        let valid = true;
+        let { values, errors } = state;
+        for (let key in errors) {
+            if (errors[key].trim() !== "") {
+                valid = false;
+            }
+        }
+        for (let key in values) {
+            if (values[key].trim() === "") {
+                valid = false;
+                if (key !== "message") {
+                    errors[key] = style.inputBox;
+                }
+            }
+        }
+        setState({
+            ...state,
+            values,
+            errors,
+        });
+        if (valid) {
+            Swal.fire(
+                'Thank you!',
+                'Your message has been sent!',
+                'success'
+              )
+              resetBtn.current.click();
+        }
+    };
 
     return (
         <form>
@@ -81,14 +115,14 @@ export default function ContactForm() {
                 </span>
             </div>
             <button
-                type="button"
+                type="submit"
                 class="btn btn-primary btn-lg btn-block bt"
                 onClick={handleSubmit}
             >
                 Submit
             </button>
             <button
-                type="button"
+                ref={resetBtn}
                 class="btn btn-warning btn-lg btn-block bt"
                 type="reset"
                 onClick={() => {
