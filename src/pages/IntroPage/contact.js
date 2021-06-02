@@ -3,13 +3,22 @@ import "./../../App.css";
 import title from "./contact.png";
 import style from "../../css/input.module.css";
 import Input from "../../components/Input/Input";
+import { render } from "@testing-library/react";
 
-export default function ContactForm() {
+export default function ContactForm(arg) {
+
+    
+
+     
+  
+    
+
     const [state, setState] = useState({
         values: {
             name: "",
             email: "",
             message: "",
+            help:"Example: I encountered an error...",
         },
         errors: {
             name: "",
@@ -40,7 +49,21 @@ export default function ContactForm() {
         });
     };
 
-    const handleSubmit = () => {};
+    const handleSubmit = () => {
+        if (state.values.name === "" || state.values.email === "" || state.errors.name != "" || state.errors.email != "")
+        {
+            setState({
+                ...state,
+                values: {help: "Make sure the name and emails are filled correctly.."},
+                errors: {name: "",}
+            });
+        }
+        else{
+            arg.action(3)
+        }
+        
+    
+    };
 
     return (
         <form>
@@ -77,7 +100,7 @@ export default function ContactForm() {
                     }}
                 ></textarea>
                 <span class="help-block text-white">
-                    Example: I encountered an error...
+                    {state.values.help}
                 </span>
             </div>
             <button
