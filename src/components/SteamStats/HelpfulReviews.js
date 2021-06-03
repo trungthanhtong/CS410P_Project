@@ -5,7 +5,7 @@ import '../../css/bestReviews.css'
 
 
 export default function BestReviews() {
-    const [limit, setLimit] = useState(3);
+    const [limit, setLimit] = useState(4);
 
     const dispatch = useDispatch();
     const { mostHelpfulReviews } = useSelector((state) => state.GameReducer);
@@ -40,25 +40,28 @@ export default function BestReviews() {
             <h1>Most Helpful Reviews</h1>
                 <div className = 'grid-container'>
                         <div className = 'helpful-reviews'>
-                            <h2>Most Helpful Review on Steam</h2> <br/>
                                 <p>Game Title: {titles[0]}</p>
                                 <p>Recommendation: {recommendations[0]}</p>  
                                 <p>{votes[0]} people found this review helpful.</p>
-                                <p className = 'review-text'>{reviews[0]}</p>   
+                                <pre className = 'review-text'>{reviews[0].slice(0, 600)}</pre>   
                         </div>
                         <div className = 'helpful-reviews'>
-                            <h2>Most Helpful Review on Steam</h2> <br/>
                                 <p>Game Title: {titles[1]}</p>
                                 <p>Recommendation: {recommendations[1]}</p>  
                                 <p>{votes[1]} people found this review helpful.</p>
-                                <p className = 'review-text'>{reviews[1]}</p>   
+                                <pre className = 'review-text'>{reviews[1].slice(0, 600)}</pre>   
                         </div>
                         <div className = 'helpful-reviews'>
-                            <h2>Most Helpful Review on Steam</h2> <br/>
                                 <p>Game Title: {titles[2]}</p>
                                 <p>Recommendation: {recommendations[2]}</p>  
                                 <p>{votes[2]} people found this review helpful.</p>
-                                <p className = 'review-text'>{reviews[2]}</p>   
+                                <pre className = 'review-text'>{reviews[2].slice(0, 600)}</pre>   
+                        </div>
+                        <div className = 'helpful-reviews'>
+                                <p>Game Title: {titles[3]}</p>
+                                <p>Recommendation: {recommendations[3]}</p>  
+                                <p>{votes[3]} people found this review helpful.</p>
+                                <pre className = 'review-text'>{reviews[3].slice(0, 600)}</pre>   
                         </div>
                  </div>          
             </div>
