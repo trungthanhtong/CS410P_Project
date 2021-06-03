@@ -9,8 +9,6 @@ export default function FunniestReviews() {
 
     const dispatch = useDispatch();
     const { funniestReviews } = useSelector((state) => state.GameReducer);
-    const { mostHelpfulReviews } = useSelector((state) => state.GameReducer);
-
 
     useEffect(() => {
         dispatch(getFunniestReviews(limit))
