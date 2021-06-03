@@ -12,7 +12,8 @@ import { useDispatch } from "react-redux";
 import { setStatComponent } from "../redux/actions/StatActions";
 import MostPlayedGame from "../components/SteamStats/MostPlayedGame";
 import MostReviewedGame from "../components/SteamStats/MostReviewedGame";
-import BestReviews from "../components/SteamStats/BestReviews"
+import BestReviews from "../components/SteamStats/BestReviews";
+import HelpfulReviews from "../components/SteamStats/HelpfulReviews";
 import Logo from "./header-logo.png"
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -84,11 +85,16 @@ export default function MainTemplate(props) {
                                     key="3" 
                                     icon={<DesktopOutlined />}
                                 >
-                                    Best Reviews
+                                    Funniest Reviews
                                 </Menu.Item>
-                                {/* <Menu.Item key="4" icon={<DesktopOutlined />}>
+                                <Menu.Item
+                                    onClick={() =>
+                                        handleClick(<HelpfulReviews />)
+                                    }
+                                    key="4" 
+                                    icon={<DesktopOutlined />}>
                                     Most helpful reviews
-                                </Menu.Item> */}
+                                </Menu.Item>
                             </Menu>
                         </Sider>
                         <Layout className="site-layout">
