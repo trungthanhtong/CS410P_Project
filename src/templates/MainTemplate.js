@@ -12,7 +12,7 @@ import { useDispatch } from "react-redux";
 import { setStatComponent } from "../redux/actions/StatActions";
 import MostPlayedGame from "../components/SteamStats/MostPlayedGame";
 import MostReviewedGame from "../components/SteamStats/MostReviewedGame";
-import BestReviews from "../components/SteamStats/BestReviews";
+import FunniestReviews from "../components/SteamStats/FunniestReviews";
 import HelpfulReviews from "../components/SteamStats/HelpfulReviews";
 import Logo from "./header-logo.png"
 
@@ -80,7 +80,7 @@ export default function MainTemplate(props) {
                                 </Menu.Item>
                                 <Menu.Item 
                                     onClick={() =>
-                                        handleClick(<BestReviews />)
+                                        handleClick(<FunniestReviews />)
                                     }
                                     key="3" 
                                     icon={<DesktopOutlined />}
