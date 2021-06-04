@@ -24,6 +24,7 @@ export default class Nav extends Component{
         return (
             <nav>
                 <ul className="navs">
+                    
                     <li onClick={() => this.props.action(1)}>
                         <Link style={navss} to="/about">
                             About SteamStats

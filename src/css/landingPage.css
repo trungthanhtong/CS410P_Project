@@ -80,6 +80,10 @@ nav {
   margin-top: 20px;
   width: 50%;
 }
+
+.text-center .tutor-bt{
+  margin: 100px;
+}
 @keyframes wobble {
 
   

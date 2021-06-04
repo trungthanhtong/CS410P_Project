@@ -6,6 +6,7 @@ import title from "./steamtistic.png";
 import Intro_title from "./intro_title";
 import About from "./about";
 import Contact from "./contact";
+import Tutorial from "./tutorial"
 import { Link } from "react-router-dom";
 
 
@@ -35,7 +36,7 @@ export default class intro extends Component{
                 intro: false,
                 about: true,
                 contact: false,
-                form_s: false,
+                tutor: false,
             });
         }
         else if(arg === 2){
@@ -43,7 +44,7 @@ export default class intro extends Component{
                 intro: false,
                 about: false,
                 contact: true,
-                form_s: false,
+                tutor: false,
             });  
         }
         else if(arg === 3){
@@ -51,7 +52,7 @@ export default class intro extends Component{
                 intro: false,
                 about: false,
                 contact: false,
-                form_s: true,
+                tutor: true,
             });  
         }
         else{
@@ -59,7 +60,7 @@ export default class intro extends Component{
                 intro: true,
                 about: false,
                 contact: false,
-                form_s: false,
+                tutor: false,
             });
         }
 
@@ -89,10 +90,11 @@ export default class intro extends Component{
                                 
                             </div>
                             
-                            <div className="col-sm-6 welcome-container">
+                            <div className="col-sm-6 welcome-container" action={this.handler}>
                                 {this.state.intro === true && <Intro_title />}
-                                {this.state.about === true && <About />}
+                                {this.state.about === true && <About action={this.handler}/>}
                                 {this.state.contact === true && <Contact/>}
+                                {this.state.tutor === true && <Tutorial/>}
                                 
                         
                             </div>
