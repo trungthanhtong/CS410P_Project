@@ -29,8 +29,12 @@ export default function BestReviews() {
         recommendations.push(value.recommendation);
         votes.push(value.helpful);
         let review = value.review;
-        review = review.replace(/&gt/g, "\n>")
+        review = review.replace(/&gt/g, "\n>");
         review = review.replace(/&amp/g, "&");
+        if (review.length > 600) {
+            review = review.slice(0,600)
+            review = review.concat(" ...")
+        };
         reviews.push(review);
     }
 
@@ -43,25 +47,25 @@ export default function BestReviews() {
                                 <p>Game Title: {titles[0]}</p>
                                 <p>Recommendation: {recommendations[0]}</p>  
                                 <p>{votes[0]} people found this review helpful.</p>
-                                <pre className = 'review-text'>{reviews[0].slice(0, 600)}</pre>   
+                                <pre className = 'review-text'>{reviews[0]}</pre>   
                         </div>
                         <div className = 'helpful-reviews'>
                                 <p>Game Title: {titles[1]}</p>
                                 <p>Recommendation: {recommendations[1]}</p>  
                                 <p>{votes[1]} people found this review helpful.</p>
-                                <pre className = 'review-text'>{reviews[1].slice(0, 600)}</pre>   
+                                <pre className = 'review-text'>{reviews[1]}</pre>   
                         </div>
                         <div className = 'helpful-reviews'>
                                 <p>Game Title: {titles[2]}</p>
                                 <p>Recommendation: {recommendations[2]}</p>  
                                 <p>{votes[2]} people found this review helpful.</p>
-                                <pre className = 'review-text'>{reviews[2].slice(0, 600)}</pre>   
+                                <pre className = 'review-text'>{reviews[2]}</pre>   
                         </div>
                         <div className = 'helpful-reviews'>
                                 <p>Game Title: {titles[3]}</p>
                                 <p>Recommendation: {recommendations[3]}</p>  
                                 <p>{votes[3]} people found this review helpful.</p>
-                                <pre className = 'review-text'>{reviews[3].slice(0, 600)}</pre>   
+                                <pre className = 'review-text'>{reviews[3]}</pre>   
                         </div>
                  </div>          
             </div>
