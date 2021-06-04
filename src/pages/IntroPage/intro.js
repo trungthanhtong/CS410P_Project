@@ -78,7 +78,11 @@ export default class intro extends Component{
                 <Nav action={this.handler}/>
                 <div className="gradient" action={this.handler}>
                     <div className="container" action={this.handler}>
+                        
+                        {this.state.tutor === false &&
                         <div className="row" action={this.handler}>
+                            
+                              
                             <div className="col-sm-6 d-none d-sm-block">
                                 
                                 <img onClick={() => this.handler(0)}
@@ -90,15 +94,20 @@ export default class intro extends Component{
                                 
                             </div>
                             
+                            
                             <div className="col-sm-6 welcome-container" action={this.handler}>
                                 {this.state.intro === true && <Intro_title />}
                                 {this.state.about === true && <About action={this.handler}/>}
                                 {this.state.contact === true && <Contact/>}
-                                {this.state.tutor === true && <Tutorial/>}
+                                
                                 
                         
                             </div>
                         </div>
+                        }
+
+                        {this.state.tutor === true && <Tutorial/>}
+
                     </div>
                 </div>
             </div>
