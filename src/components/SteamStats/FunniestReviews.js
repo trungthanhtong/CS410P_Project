@@ -39,7 +39,7 @@ export default function FunniestReviews() {
             <div className="data-limit">
             <h1>Funniest Reviews</h1>
                 <div className = 'grid-container'>
-                        <div className = 'funny-reviews'>
+                        <div className = 'funny-reviews funniest'>
                                 <p>Game Title: {titles[0]}</p>
                                 <p>Recommendation: {recommendations[0]}</p>  
                                 <p>{votes[0]} people found this review funny.</p>

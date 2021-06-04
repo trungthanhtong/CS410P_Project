@@ -45,7 +45,7 @@ export default function BestReviews() {
             <div className="data-limit">
             <h1>Most Helpful Reviews</h1>
                 <div className = 'grid-container'>
-                        <div className = 'helpful-reviews'>
+                        <div className = 'helpful-reviews most-helpful'>
                                 <p>Game Title: {titles[0]}</p>
                                 <p>Recommendation: {recommendations[0]}</p>  
                                 <p>{votes[0]} people found this review helpful.</p>

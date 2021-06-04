@@ -1,7 +1,14 @@
+.funniest, .most-helpful {
+    border-width: 5px 0 5px;
+    border-style: solid;
+    border-image: repeating-radial-gradient(#ffb700, #ffe091);
+    border-image-slice: 1;
+    border-radius: 20px;
+}
+
 .funny-reviews, .helpful-reviews {
     width: 50%;
     height: 100%;
-    border: 1px solid black;
     color: #001529;
     border-radius: 20px;
     padding: 15px;
