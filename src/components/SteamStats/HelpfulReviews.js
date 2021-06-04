@@ -31,10 +31,12 @@ export default function BestReviews() {
         let review = value.review;
         review = review.replace(/&gt/g, "\n>");
         review = review.replace(/&amp/g, "&");
-        if (review.length > 600) {
-            review = review.slice(0,600)
+        /*
+        if (review.length > 1000) {
+            review = review.slice(0,1000)
             review = review.concat(" ...")
         };
+        */
         reviews.push(review);
     }
 
