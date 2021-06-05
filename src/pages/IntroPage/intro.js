@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Nav from "../Nav/Nav";
+import Footer from "../Footer/Footer";
 import "./../../App.css";
 import logo from "./intro_logooo.gif";
 import title from "./steamtistic.png";
@@ -110,6 +111,7 @@ export default class intro extends Component{
 
                     </div>
                 </div>
+                <Footer/>
             </div>
         );
 

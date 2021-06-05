@@ -127,10 +127,23 @@ nav {
   background-color: rgb(74, 182, 250);
 }
 
+
 .tutor-side-value-demo{
   color: greenyellow;
   font-weight: bolder;
   text-shadow: 0px 2px black;
+}
+
+footer {
+  padding: 10px 0 2px 0;
+  background: rgb(0, 21, 41)
+}
+
+footer p {
+  color: white;
+  text-align: center;
+  font-size: small;
+  font-style: italic;
 }
 
 @keyframes wobble {
