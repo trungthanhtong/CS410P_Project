@@ -120,7 +120,7 @@ export default function MostReviewedGame() {
                     </div>
                 ) : (
                     <div
-                        style={{ maxWidth: "1000px", marginTop: -100 }}
+                        style={{ maxWidth: "700px", marginTop: -100 }}
                         className="mx-auto"
                     >
                         <Doughnut
@@ -138,7 +138,7 @@ export default function MostReviewedGame() {
                             options={{
                                 plugins: {
                                     legend: {
-                                        display: false,
+                                        position: "right",
                                     },
                                 },
                             }}

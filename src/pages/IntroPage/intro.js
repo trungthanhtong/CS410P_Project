@@ -19,6 +19,7 @@ export default class intro extends Component{
         about: false,
         contact: false,
         form_s: false,
+        tutor: false,
     }
 
     constructor(props){
