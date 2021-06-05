@@ -148,6 +148,11 @@ footer p {
   font-style: italic;
 }
 
+.footer-bt{
+  margin-left: 10%;
+  margin-bottom: 10px;
+}
+
 @keyframes wobble {
 
   
@@ -185,6 +190,10 @@ footer p {
   .tutor-side-bar-demo li button{
     width: 50%;
     
+  }
+  .footer-bt{
+    margin-left: 38%;
+    margin-bottom: 10px;
   }
 
 }
