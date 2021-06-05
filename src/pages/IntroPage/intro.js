@@ -111,7 +111,7 @@ export default class intro extends Component{
 
                     </div>
                 </div>
-                <Footer/>
+                <Footer  action={this.handler}/>
             </div>
         );
 
