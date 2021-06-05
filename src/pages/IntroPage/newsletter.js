@@ -7,6 +7,8 @@ import Swal from 'sweetalert2'
 
 export default function News() {
 
+    const resetBtn = useRef(null);
+
     const [state, setState] = useState({
         values: {
             email: "",
@@ -63,11 +65,13 @@ export default function News() {
         });
         if (valid) {
             Swal.fire(
-                'Thank you!',
-                'Your message has been sent!',
+                'Good News',
+                'Are coming your way',
                 'success'
               )
+              resetBtn.current.click();
         }
+        
     };
 
     return (
@@ -90,6 +94,17 @@ export default function News() {
                 onClick={handleSubmit}
             >
                 Subscribe!
+            </button>
+            <button
+                ref={resetBtn}
+                class="btn btn-warning btn-lg btn-block bt2"
+                type="reset"
+                onClick={() => {
+                    const newValues = {...state.values, message: ''};
+                        setState({...state, values: newValues})
+                }}
+            >
+                Reset
             </button>
         </form>
     );
