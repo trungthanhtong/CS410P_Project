@@ -12,19 +12,27 @@ export default class Footer extends Component{
         return (
             <footer>
                 <div className="row">
-                    <div className="col-sm-3">
-                    <button
+                    <div className="col-sm-1">
+                        <button
                             class="btn btn-primary mt-2 footer-bt"
                             onClick={() => this.props.action(3)}
                         >
                         Start Tutorial
                         </button>
                     </div>
-                    <div className="col-sm-6">
+                    <div className="col-sm-1">
+                        <button
+                            class="btn btn-outline-success mt-2 footer-bt2"
+                            onClick={() => this.props.action(4)}
+                        >
+                        Subscribe to us
+                        </button>
+                    </div>
+                    <div className="col-sm-8">
                         <p>Copyright Thanh, Maeve, Jonathan</p>
                         <p>2021 Front-End Dashboard Project</p>
                     </div>
-                    <div className="col-sm-3">
+                    <div className="col-sm-2">
                         <p>Email: steamstistic@stt.com</p>
                         <p>Phone: (123)456-7890</p>
                     </div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import { Layout, Menu } from "antd";
 import {
     DesktopOutlined,
@@ -49,11 +49,13 @@ export default function MainTemplate(props) {
                             onCollapse={onCollapse}
                             style={{paddingTop:'60px'}}
                         >
+                            <Link to="/">
                             <img
                                 className="w-100 h-logo"
                                 src={Logo}
                                  alt="steamstats_title"
                                 />
+                            </Link>
                             <div className="logo" />
                             <Menu
                                 theme="dark"

@@ -7,7 +7,8 @@ import title from "./steamtistic.png";
 import Intro_title from "./intro_title";
 import About from "./about";
 import Contact from "./contact";
-import Tutorial from "./tutorial"
+import Tutorial from "./tutorial";
+import News from "./newsletter";
 import { Link } from "react-router-dom";
 
 
@@ -20,6 +21,7 @@ export default class intro extends Component{
         contact: false,
         form_s: false,
         tutor: false,
+        news: false,
     }
 
     constructor(props){
@@ -39,6 +41,7 @@ export default class intro extends Component{
                 about: true,
                 contact: false,
                 tutor: false,
+                news: false,
             });
         }
         else if(arg === 2){
@@ -47,6 +50,7 @@ export default class intro extends Component{
                 about: false,
                 contact: true,
                 tutor: false,
+                news: false,
             });  
         }
         else if(arg === 3){
@@ -55,6 +59,16 @@ export default class intro extends Component{
                 about: false,
                 contact: false,
                 tutor: true,
+                news: false,
+            });  
+        }
+        else if(arg === 4){
+            this.setState({
+                intro: false,
+                about: false,
+                contact: false,
+                tutor: false,
+                news: true,
             });  
         }
         else{
@@ -63,6 +77,7 @@ export default class intro extends Component{
                 about: false,
                 contact: false,
                 tutor: false,
+                news: false,
             });
         }
 
@@ -101,6 +116,7 @@ export default class intro extends Component{
                                 {this.state.intro === true && <Intro_title />}
                                 {this.state.about === true && <About action={this.handler}/>}
                                 {this.state.contact === true && <Contact/>}
+                                {this.state.news === true && <News/>}
                                 
                                 
                         

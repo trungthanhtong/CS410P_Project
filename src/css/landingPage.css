@@ -83,6 +83,11 @@ nav {
   width: 50%;
 }
 
+.bt2{
+  margin-top: 20px;
+  width: 100%;
+}
+
 .tutor-bt{
   margin: 100px;
 }
@@ -153,6 +158,10 @@ footer p {
   margin-bottom: 10px;
 }
 
+.footer-bt2{
+  margin-bottom: 10px;
+}
+
 @keyframes wobble {
 
   
@@ -196,4 +205,8 @@ footer p {
     margin-bottom: 10px;
   }
 
+  .footer-bt2{
+    margin-left: 36%;
+    margin-bottom: 10px;
+  }
 }
