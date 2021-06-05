@@ -70,12 +70,12 @@ export default function MostReviewedGame() {
             <div className="chart-container">
                 <h1
                     className="mt-3"
-                    style={{width: '400px',
+                    style={{width: '50%',
                             margin: 'auto',
                             textAlign: 'center'}}>
                     Most Reviewed Games</h1>
                 {type === "Bar" ? (
-                    <div style={{ maxWidth: "1000px" }} className="mx-auto">
+                    <div style={{ width: '100%', height: '100%', maxWidth: "1000px" }} className="mx-auto">
                         <Bar
                             data={{
                                 labels: label,
@@ -94,6 +94,13 @@ export default function MostReviewedGame() {
                                     xAxes: [{
                                         gridLines: {
                                             color: "rgba(0,0,0,0)",
+                                        },
+                                        ticks: {
+                                            display: false,
+                                        },
+                                        barThickness: 15,
+                                        scaleLabel: {
+                                            show: false,
                                         }
                                     }],
                                     yAxes: [{
@@ -104,15 +111,16 @@ export default function MostReviewedGame() {
                                 },
                                 plugins: {
                                     legend: {
-                                        position: "bottom",
+                                        display: false,
                                     },
                                 },
+                                responsive: 'false',
                             }}
                         />
                     </div>
                 ) : (
                     <div
-                        style={{ maxWidth: "700px", marginTop: -100 }}
+                        style={{ maxWidth: "1000px", marginTop: -100 }}
                         className="mx-auto"
                     >
                         <Doughnut
@@ -130,7 +138,7 @@ export default function MostReviewedGame() {
                             options={{
                                 plugins: {
                                     legend: {
-                                        position: "right",
+                                        display: false,
                                     },
                                 },
                             }}

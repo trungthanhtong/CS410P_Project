@@ -89,7 +89,7 @@ export default function MostPlayedGame() {
                             options={{
                                 plugins: {
                                     legend: {
-                                        position: "bottom",
+                                        display: false,
                                     },
                                 },
                             }}
