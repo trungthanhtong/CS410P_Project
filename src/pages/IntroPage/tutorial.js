@@ -26,10 +26,13 @@ export default class Tutorial extends Component{
         super(props)
 
         this.t1 = this.t1.bind(this);
+        this.t1p = this.t1p.bind(this);
         this.t2 = this.t2.bind(this);
+        this.t2p = this.t2p.bind(this);
         this.t3 = this.t3.bind(this);
         this.db_lefts = this.db_lefts.bind(this);
         this.db_rights = this.db_rights.bind(this);
+        this.again = this.again.bind(this);
   
     }
 
@@ -58,6 +61,13 @@ export default class Tutorial extends Component{
         });
     }
 
+    t1p(){
+        this.setState({
+            t2: false,
+            t1: true,
+        });
+    }
+
     t2(){
         this.setState({
             t2: false,
@@ -65,10 +75,24 @@ export default class Tutorial extends Component{
         });
     }
 
+    t2p(){
+        this.setState({
+            t3: false,
+            t2: true,
+        });
+    }
+
     t3(){
         this.setState({
             t3: false,
             t4: true,
+        });
+    }
+
+    again(){
+        this.setState({
+            t4: false,
+            t1: true,
         });
     }
 
@@ -155,6 +179,13 @@ export default class Tutorial extends Component{
                         
                         
                         <button
+                            class="btn btn-warning mt-2"
+                            onClick={this.t1p}
+                        >
+                        &lt;- Prev
+                        </button>
+
+                        <button
                             class="btn btn-primary mt-2"
                             onClick={this.t2}
                         >
@@ -208,6 +239,13 @@ export default class Tutorial extends Component{
                         <h6>This feature will be located on top of the chart and only for the most played game and most reviewed game section</h6>
     
                         <button
+                            class="btn btn-warning mt-2"
+                            onClick={this.t2p}
+                        >
+                        &lt;- Prev
+                        </button>
+
+                        <button
                             class="btn btn-primary mt-2"
                             onClick={this.t3}
                         >
@@ -225,6 +263,13 @@ export default class Tutorial extends Component{
                         />
                         <h3>you are ready</h3>
                         <Link to="/steamstat" className="btn btn-success">Lets Go!</Link>
+                        <br></br>
+                        <button
+                            class="btn btn-primary mt-2"
+                            onClick={this.again}
+                        >
+                        Restart Tutorial
+                        </button>
                     </div>
 
                 }
