@@ -107,6 +107,32 @@ nav {
   font-size: 30px;
 }
 
+.tutor-side-bar-demo{
+  list-style-type: none;
+  margin: 30px 0 10px 0;
+  padding: 0;
+  width: 50%;
+  margin-left: 40%;
+}
+
+.tutor-side-bar-demo li button{
+  display: block;
+  color: white;
+  padding: 8px 16px;
+  width: 40%;
+  background-color: rgb(0, 21, 41);
+}
+
+.tutor-side-bar-demo li button:hover{
+  background-color: rgb(74, 182, 250);
+}
+
+.tutor-side-value-demo{
+  color: greenyellow;
+  font-weight: bolder;
+  text-shadow: 0px 2px black;
+}
+
 @keyframes wobble {
 
   
@@ -135,4 +161,15 @@ nav {
     margin-right: 40px;
     margin-left: -20px;
   }
+
+  .tutor-side-bar-demo{
+    width: 100%;
+    margin-left: 25%;
+  }
+  
+  .tutor-side-bar-demo li button{
+    width: 50%;
+    
+  }
+
 }

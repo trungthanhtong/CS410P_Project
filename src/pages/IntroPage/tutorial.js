@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import "./../../App.css";
 import pic1 from "./tutor-pic/1.jpg"
+import pic2 from "./tutor-pic/2.jpg"
+import ready from "./tutor-pic/ready.png"
 import title from "./about.png";
 import { Link } from "react-router-dom";
 
@@ -17,6 +19,7 @@ export default class Tutorial extends Component{
         t2: false,
         t3: false,
         t4: false,
+        side: "Most Played Game",
     }
 
     constructor(props){
@@ -42,6 +45,12 @@ export default class Tutorial extends Component{
         });
     }
 
+    side(arg){
+        this.setState({
+            side: arg,
+        });
+    }
+
     t1(){
         this.setState({
             t1: false,
@@ -64,6 +73,8 @@ export default class Tutorial extends Component{
     }
 
     render(){
+
+        
         return (
             <div className="text-center tutor">
 
@@ -90,8 +101,59 @@ export default class Tutorial extends Component{
 
                 {this.state.t2 === true && 
                     <div>
+                        <img
+                        className="w-20 mt-5"
+                        src={pic2}
+                        alt="tutorial picture 2"
+                        />
 
-                        <h3>On the left hand side you will see a side navigation bar with selection you can click on</h3>
+                        <h4>On the left hand side you will see a side navigation bar like this the picture above with selection you can click on</h4>
+                        <hr></hr>
+                        
+
+                        <h5>Try playing with them in this simplified version below</h5>
+                        <ul className="tutor-side-bar-demo" >
+                            <li><button 
+                                value="Most Played Game" 
+                                onClick={(e) => {
+                                        this.side(e.target.value);
+                                    }}
+                                >Most Played Game
+                                </button>
+                            </li>
+                            <li><button 
+                                value="Most reviewed game" 
+                                onClick={(e) => {
+                                        this.side(e.target.value);
+                                    }}
+                                >Most reviewed game
+                                </button>
+                            </li>
+                            <li><button 
+                                value="Funniest reviews" 
+                                onClick={(e) => {
+                                        this.side(e.target.value);
+                                    }}
+                                >Funniest reviews
+                                </button>
+                            </li>
+                            <li><button
+                                value="Most helpful reviews" 
+                                onClick={(e) => {
+                                        this.side(e.target.value);
+                                    }}
+                                >Most helpful reviews
+                                </button>
+                            </li>
+                        </ul>
+
+                        <h5>You can click on them to select which imformation to display on the application</h5>
+                        <h5>The light blue highlights indicates which information is being displayed right now</h5>
+                        <hr></hr>
+
+                        <h3>NOW SHOWING <span className="tutor-side-value-demo">{this.state.side}</span></h3>
+                        
+                        
                         <button
                             class="btn btn-primary mt-2"
                             onClick={this.t2}
@@ -154,7 +216,18 @@ export default class Tutorial extends Component{
                     </div>
                 }
 
+                {this.state.t4 === true && 
+                    <div>
+                        <img
+                        className="w-20 mt-5"
+                        src={ready}
+                        alt="tutorial picture 1"
+                        />
+                        <h3>you are ready</h3>
+                        <Link to="/steamstat" className="btn btn-success">Lets Go!</Link>
+                    </div>
 
+                }
                 
 
 
