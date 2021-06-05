@@ -37,7 +37,12 @@ export default function FunniestReviews() {
     return (
         <div>
             <div className="data-limit">
-            <h1>Funniest Reviews</h1>
+            <h1 className="mt-3"
+                    style={{width: '50%',
+                            margin: 'auto',
+                            textAlign: 'center'}}
+                            >Funniest Reviews</h1>
+                <br/>
                 <div className = 'grid-container'>
                         <div className = 'funny-reviews funniest'>
                                 <p>Game Title: {titles[0]}</p>
@@ -45,19 +50,19 @@ export default function FunniestReviews() {
                                 <p>{votes[0]} people found this review funny.</p>
                                 <pre className='review-text'>{reviews[0]}</pre>   
                         </div>
-                        <div className = 'funny-reviews'>
+                        <div className = 'funny-reviews funny'>
                                 <p>Game Title: {titles[1]}</p>
                                 <p>Recommendation: {recommendations[1]}</p>  
                                 <p>{votes[1]} people found this review funny.</p>
                                 <p className='review-text'>{reviews[1]}</p>   
                         </div>
-                        <div className = 'funny-reviews'>
+                        <div className = 'funny-reviews funny'>
                                 <p>Game Title: {titles[2]}</p>
                                 <p>Recommendation: {recommendations[2]}</p>  
                                 <p>{votes[2]} people found this review funny.</p>
                                 <p className='review-text'>{reviews[2]}</p>   
                         </div>
-                        <div className = 'funny-reviews'>
+                        <div className = 'funny-reviews funny'>
                                 <p>Game Title: {titles[3]}</p>
                                 <p>Recommendation: {recommendations[3]}</p>  
                                 <p>{votes[3]} people found this review funny.</p>

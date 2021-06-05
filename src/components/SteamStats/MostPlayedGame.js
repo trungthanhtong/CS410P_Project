@@ -64,9 +64,15 @@ export default function MostPlayedGame() {
                 </div>
             </div>
             <div className="chart-container">
-                <h1 className="mt-3">Most Played Games</h1>
+                <h1 
+                    className="mt-3"
+                    style={{width: '50%',
+                            margin: 'auto',
+                            textAlign: 'center'}}>
+                    Most Played Games
+                </h1>
                 {type === "Bar" ? (
-                    <div style={{ maxWidth: "1000px" }} className="mx-auto">
+                    <div style={{ width: '100%', maxWidth: "1000px" }} className="mx-auto">
                         <Bar
                             data={{
                                 labels: label,

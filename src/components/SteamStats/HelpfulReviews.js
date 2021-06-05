@@ -43,7 +43,11 @@ export default function BestReviews() {
     return (
         <div>
             <div className="data-limit">
-            <h1>Most Helpful Reviews</h1>
+            <h1 className="mt-3"
+                    style={{width: '50%',
+                            margin: 'auto',
+                            textAlign: 'center'}}>Most Helpful Reviews</h1>
+                <br/>
                 <div className = 'grid-container'>
                         <div className = 'helpful-reviews most-helpful'>
                                 <p>Game Title: {titles[0]}</p>
@@ -51,19 +55,19 @@ export default function BestReviews() {
                                 <p>{votes[0]} people found this review helpful.</p>
                                 <pre className = 'review-text'>{reviews[0]}</pre>   
                         </div>
-                        <div className = 'helpful-reviews'>
+                        <div className = 'helpful-reviews helpful'>
                                 <p>Game Title: {titles[1]}</p>
                                 <p>Recommendation: {recommendations[1]}</p>  
                                 <p>{votes[1]} people found this review helpful.</p>
                                 <pre className = 'review-text'>{reviews[1]}</pre>   
                         </div>
-                        <div className = 'helpful-reviews'>
+                        <div className = 'helpful-reviews helpful'>
                                 <p>Game Title: {titles[2]}</p>
                                 <p>Recommendation: {recommendations[2]}</p>  
                                 <p>{votes[2]} people found this review helpful.</p>
                                 <pre className = 'review-text'>{reviews[2]}</pre>   
                         </div>
-                        <div className = 'helpful-reviews'>
+                        <div className = 'helpful-reviews helpful'>
                                 <p>Game Title: {titles[3]}</p>
                                 <p>Recommendation: {recommendations[3]}</p>  
                                 <p>{votes[3]} people found this review helpful.</p>

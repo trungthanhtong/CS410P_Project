@@ -68,7 +68,12 @@ export default function MostReviewedGame() {
                 </div>
             </div>
             <div className="chart-container">
-                <h1 className="mt-3">Most Reviewed Games</h1>
+                <h1
+                    className="mt-3"
+                    style={{width: '400px',
+                            margin: 'auto',
+                            textAlign: 'center'}}>
+                    Most Reviewed Games</h1>
                 {type === "Bar" ? (
                     <div style={{ maxWidth: "1000px" }} className="mx-auto">
                         <Bar
