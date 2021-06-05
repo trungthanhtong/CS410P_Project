@@ -81,6 +81,7 @@ export default function MostPlayedGame() {
                                         label: `Top ${limit} Most Played Games`,
                                         backgroundColor: backgroundColors,
                                         borderColor: borderColors,
+                                        borderRadius: 10,
                                         data: data,
                                     },
                                 ],

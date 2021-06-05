@@ -1,3 +1,7 @@
+.grid-container {
+    width: 100%;
+}
+
 .funniest, .most-helpful {
     border-width: 5px 0 5px 0;
     border-style: solid;
@@ -19,7 +23,6 @@
     padding: 15px;
     min-width: 0;
     margin: auto;
-
 }
 
 .review-text {
@@ -45,13 +48,35 @@ h {
 }
 
 @media only screen and (max-width: 414px) {
+    .grid-container {
+        width: 100%;
+    }
+
+    .funniest, .most-helpful {
+        border-width: 5px 0 5px 0;
+        border-style: solid;
+        border-image: repeating-radial-gradient(#ffb700, #ffe091);
+        border-image-slice: 1;
+        border-radius: 20px;
+    }
+    
+    .funny, .helpful {
+        border-width: 0 0 5px 0;
+        border-color: black;
+        border-style: solid;
+    }
+
     .funny-reviews, .helpful-reviews {
         width: 100%;
-        height: 50%;
-        border: 1px solid black;
+        height: 100%;
         color: #001529;
-        border-radius: 20px;
         padding: 15px;
         min-width: 0;
+        margin: auto;
+    }
+
+    h1 {
+        width: 100%;
+        color: #001529
     }
 }

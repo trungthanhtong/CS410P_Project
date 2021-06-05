@@ -84,11 +84,24 @@ export default function MostReviewedGame() {
                                         label: `Top ${limit} Most Reviewed Games`,
                                         backgroundColor: backgroundColors,
                                         borderColor: borderColors,
+                                        borderRadius: 10,
                                         data: data,
                                     },
                                 ],
                             }}
                             options={{
+                                scales: {
+                                    xAxes: [{
+                                        gridLines: {
+                                            color: "rgba(0,0,0,0)",
+                                        }
+                                    }],
+                                    yAxes: [{
+                                        gridLines: {
+                                            color: "rgba(0,0,0,0)",
+                                        }
+                                    }]
+                                },
                                 plugins: {
                                     legend: {
                                         position: "bottom",
