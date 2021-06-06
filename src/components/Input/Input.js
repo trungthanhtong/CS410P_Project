@@ -1,5 +1,7 @@
 import React from "react";
 
+
+// Custom input that will show error when the input is not valid
 export default function Input(props) {
 
     return (

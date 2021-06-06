@@ -11,6 +11,7 @@ import { GET_MOST_PLAYED_GAMES,
     } from "../constants/GameConstants";
 import {STATUS_CODE} from '../../util/constants/systemSettings'
 
+// Get Most Played Games and Push it to the redux store
 function * getMostPlayedGames(action) {
     try {
         const {data, status} = yield call(() => SteamService.getMostPlayedGames(action.limit));
@@ -25,6 +26,7 @@ function * getMostPlayedGames(action) {
     }
 }
 
+// Get Most Reviewed Games and Push it to the redux store
 function * getMostReviewedGames(action) {
     try {
         const {data, status} = yield call(() => SteamService.getMostReviewedGames(action.limit));
@@ -40,6 +42,7 @@ function * getMostReviewedGames(action) {
     }
 }
 
+// Get Funnies Reviews and Push it to the redux store
 function * getFunniestReviews(action) {
     try {
         const {data, status} = yield call(() => SteamService.getFunniestReviews(action.limit));
@@ -55,6 +58,7 @@ function * getFunniestReviews(action) {
     }
 }
 
+// Get Most Helpful Reviews and Push it to the redux store
 function * getMostHelpfulReviews(action) {
     try {
         const {data, status} = yield call(() => SteamService.getMostHelpfulReviews(action.limit));

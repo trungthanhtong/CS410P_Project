@@ -9,6 +9,7 @@ export default function ContactForm() {
 
     const resetBtn = useRef(null);
 
+    // State that manages the input values and errors
     const [state, setState] = useState({
         values: {
             name: "",
@@ -22,6 +23,7 @@ export default function ContactForm() {
         },
     });
 
+    // Validate the input when typing
     const handleChange = (e) => {
         let { name, value } = e.target;
         let newValues = { ...state.values, [name]: value };
@@ -45,6 +47,7 @@ export default function ContactForm() {
         });
     };
 
+    // Validate the input before submit. Show success when the input is valid
     const handleSubmit = (e) => {
         e.preventDefault();
         let valid = true;
@@ -68,11 +71,15 @@ export default function ContactForm() {
             errors,
         });
         if (valid) {
+
+            // Show message
             Swal.fire(
                 'Thank you!',
                 'Your message has been sent!',
                 'success'
               )
+
+            //   Reset the input
               resetBtn.current.click();
         }
     };
