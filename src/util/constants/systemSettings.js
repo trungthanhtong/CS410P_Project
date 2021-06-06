@@ -2,6 +2,8 @@
 
 export const STEAM_DOMAIN = 'http://steamtistics-be.herokuapp.com';
 
+
+// CONSTANTS
 export const STATUS_CODE = {
   SUCCESS: 200,
   NOT_FOUND: 404,

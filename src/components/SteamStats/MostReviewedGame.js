@@ -11,6 +11,7 @@ import {
 export default function MostReviewedGame() {
     const [limit, setLimit] = useState(5);
 
+    // Default chart
     const [type, setType] = useState("Bar");
 
     const dispatch = useDispatch();
@@ -19,19 +20,18 @@ export default function MostReviewedGame() {
     const label = [];
     const data = [];
 
-    console.log(mostReviewedGames);
 
     for (const [key, value] of Object.entries(mostReviewedGames)) {
         label.push(value.title);
         data.push(value.reviews);
     }
 
-    console.log(mostReviewedGames);
-
+    // Call API after first render (ComponentDidMount)
     useEffect(() => {
         dispatch(getMostReviewedGames(limit))
     }, [])
 
+    // Call API when the limit is updated
     useEffect(() => {
        dispatch(getMostReviewedGames(limit));
     }, [dispatch, limit]);

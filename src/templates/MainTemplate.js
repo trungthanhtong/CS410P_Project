@@ -19,7 +19,7 @@ import Logo from "./header-logo.png"
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
-// MAIN TEMPLATE FOR THE PROJECT
+// MAIN TEMPLATE FOR THE PROJECT USING HOC
 export default function MainTemplate(props) {
     let { Component, ...restRoute } = props;
 

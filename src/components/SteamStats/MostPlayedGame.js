@@ -11,6 +11,7 @@ import {
 export default function MostPlayedGame() {
     const [limit, setLimit] = useState(5);
 
+    // Default chart
     const [type, setType] = useState("Bar");
 
     const dispatch = useDispatch();
@@ -24,10 +25,12 @@ export default function MostPlayedGame() {
         data.push(value.hours_played);
     }
 
+    // Call API after render
     useEffect(() => {
         dispatch(getMostPlayedGames(limit));
     }, []);
 
+    // Call API when the limit is updated
     useEffect(() => {
         dispatch(getMostPlayedGames(limit));
     }, [dispatch, limit]);
@@ -71,6 +74,7 @@ export default function MostPlayedGame() {
                             textAlign: 'center'}}>
                     Most Played Games
                 </h1>
+                
                 {type === "Bar" ? (
                     <div style={{ width: '100%', maxWidth: "1000px" }} className="mx-auto">
                         <Bar
