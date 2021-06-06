@@ -112,7 +112,7 @@ export default class Tutorial extends Component{
                         alt="tutorial picture 1"
                         />
 
-                        <h3>Here is the page you will see when you click the get started button</h3>
+                        <h3>Here is the page you will see when you click the get started button.</h3>
     
                         <button
                             class="btn btn-primary mt-2"
@@ -131,11 +131,11 @@ export default class Tutorial extends Component{
                         alt="tutorial picture 2"
                         />
 
-                        <h4>On the left hand side you will see a side navigation bar like this the picture above with selection you can click on</h4>
+                        <h4>On the left hand side you will see a side navigation bar like the picture above with different selections you can click on.</h4>
                         <hr></hr>
                         
 
-                        <h5>Try playing with them in this simplified version below</h5>
+                        <h5>Try playing with them in the simplified version below.</h5>
                         <ul className="tutor-side-bar-demo" >
                             <li><button 
                                 value="Most Played Game" 
@@ -171,8 +171,8 @@ export default class Tutorial extends Component{
                             </li>
                         </ul>
 
-                        <h5>You can click on them to select which imformation to display on the application</h5>
-                        <h5>The light blue highlights indicates which information is being displayed right now</h5>
+                        <h5>You can click on them to select which information to display on the application.</h5>
+                        <h5>The light blue highlights indicates which information is being displayed right now.</h5>
                         <hr></hr>
 
                         <h3>NOW SHOWING <span className="tutor-side-value-demo">{this.state.side}</span></h3>
@@ -229,11 +229,11 @@ export default class Tutorial extends Component{
                             </div>
                         </div>
 
-                        <h3>Here is the dropbox selector to customized how much data to show and what style of chart to use</h3>
-                        <h5>Feel free to try and play with them.
+                        <h3>Here is the dropbox selector to customize how much data to show and what style of chart to use.</h3>
+                        <h5>Feel free to and play with them to see how they work.
                         </h5>
 
-                        <h5>Showing <span className="tutor-db-value-demo">{this.state.db_left}</span> datas</h5>
+                        <h5>Showing <span className="tutor-db-value-demo">{this.state.db_left}</span> categories</h5>
                         <h5>The chart is <span  className="tutor-db-value-demo">{this.state.db_right}</span> style</h5>
 
                         <h6>This feature will be located on top of the chart and only for the most played game and most reviewed game section</h6>
@@ -261,8 +261,9 @@ export default class Tutorial extends Component{
                         src={ready}
                         alt="tutorial picture 1"
                         />
-                        <h3>you are ready</h3>
-                        <Link to="/steamstat" className="btn btn-success">Lets Go!</Link>
+                        <h3>You are ready! </h3>
+                        <h3>Press Let's Go to navigate to the main dashboard, or press Restart Tutorial to go through the tutorial again.</h3>
+                        <Link to="/steamstat" className="btn btn-success">Let's Go!</Link>
                         <br></br>
                         <button
                             class="btn btn-primary mt-2"

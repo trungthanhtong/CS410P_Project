@@ -50,28 +50,41 @@ export default function BestReviews() {
                 <br/>
                 <div className = 'grid-container'>
                         <div className = 'helpful-reviews most-helpful'>
-                                <p>Game Title: {titles[0]}</p>
-                                <p>Recommendation: {recommendations[0]}</p>  
-                                <p>{votes[0]} people found this review helpful.</p>
-                                <pre className = 'review-text'>{reviews[0]}</pre>   
+                                <h4>Game Title: {titles[0]}</h4>
+                                <h6>Recommendation: {recommendations[0]}</h6>  
+                                <h6>{votes[0]} people found this review helpful.</h6>
+                                <br />
+                                <p className = 'review-text'>{reviews[0]}</p>   
                         </div>
                         <div className = 'helpful-reviews helpful'>
-                                <p>Game Title: {titles[1]}</p>
-                                <p>Recommendation: {recommendations[1]}</p>  
-                                <p>{votes[1]} people found this review helpful.</p>
-                                <pre className = 'review-text'>{reviews[1]}</pre>   
+                                <h4>Game Title: {titles[1]}</h4>
+                                <h6>Recommendation: {recommendations[1]}</h6>  
+                                <h6>{votes[1]} people found this review helpful.</h6>
+                                <br />
+
+                                <p className = 'review-text'>{reviews[1]}</p> 
+                                <br />
+  
                         </div>
                         <div className = 'helpful-reviews helpful'>
-                                <p>Game Title: {titles[2]}</p>
-                                <p>Recommendation: {recommendations[2]}</p>  
-                                <p>{votes[2]} people found this review helpful.</p>
-                                <pre className = 'review-text'>{reviews[2]}</pre>   
+                                <h4>Game Title: {titles[2]}</h4>
+                                <h6>Recommendation: {recommendations[2]}</h6>  
+                                <h6>{votes[2]} people found this review helpful.</h6>
+                                <br />
+
+                                <p className = 'review-text'>{reviews[2]}</p>   
+                                <br />
+
                         </div>
                         <div className = 'helpful-reviews helpful'>
-                                <p>Game Title: {titles[3]}</p>
-                                <p>Recommendation: {recommendations[3]}</p>  
-                                <p>{votes[3]} people found this review helpful.</p>
-                                <pre className = 'review-text'>{reviews[3]}</pre>   
+                                <h4>Game Title: {titles[3]}</h4>
+                                <h6>Recommendation: {recommendations[3]}</h6>  
+                                <h6>{votes[3]} people found this review helpful.</h6>
+                                <br />
+
+                                <p className = 'review-text'>{reviews[3]}</p> 
+                                <br />
+  
                         </div>
                  </div>          
             </div>

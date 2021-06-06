@@ -146,6 +146,13 @@ export default function MostReviewedGame() {
                     </div>
                 )}
             </div>
+            <p style={
+                    {width: '50%', 
+                    margin: 'auto', 
+                    textAlign: 'center', 
+                    color: 'grey'}}>
+                        Data is categorized by the top 5, 10, or 15 most reviewed games by the total number of reviews posted on Steam.
+                </p>
         </div>
     );
 }

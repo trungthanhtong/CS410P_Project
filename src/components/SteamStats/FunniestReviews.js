@@ -45,28 +45,46 @@ export default function FunniestReviews() {
                 <br/>
                 <div className = 'grid-container'>
                         <div className = 'funny-reviews funniest'>
-                                <p>Game Title: {titles[0]}</p>
-                                <p>Recommendation: {recommendations[0]}</p>  
-                                <p>{votes[0]} people found this review funny.</p>
-                                <pre className='review-text'>{reviews[0]}</pre>   
+                                <h4>Game Title: {titles[0]}</h4>
+                                <h6>Recommendation: {recommendations[0]}</h6>  
+                                <h6>{votes[0]} people found this review funny.</h6>
+
+                                <pre className='review-text'>{reviews[0]}</pre> 
+                                <br />
+  
                         </div>
                         <div className = 'funny-reviews funny'>
-                                <p>Game Title: {titles[1]}</p>
-                                <p>Recommendation: {recommendations[1]}</p>  
-                                <p>{votes[1]} people found this review funny.</p>
-                                <p className='review-text'>{reviews[1]}</p>   
+                                <h4>Game Title: {titles[1]}</h4>
+
+                                <h6>Recommendation: {recommendations[1]}</h6>  
+                                <h6>{votes[1]} people found this review funny.</h6>
+                                <br />
+
+                                <p className='review-text'>{reviews[1]}</p> 
+                                <br />
+  
                         </div>
                         <div className = 'funny-reviews funny'>
-                                <p>Game Title: {titles[2]}</p>
-                                <p>Recommendation: {recommendations[2]}</p>  
-                                <p>{votes[2]} people found this review funny.</p>
+                                <h4>Game Title: {titles[2]}</h4>
+
+                                <h6>Recommendation: {recommendations[2]}</h6>  
+                                <h6>{votes[2]} people found this review funny.</h6>
+                                <br />
+
                                 <p className='review-text'>{reviews[2]}</p>   
+                                <br />
+
                         </div>
                         <div className = 'funny-reviews funny'>
-                                <p>Game Title: {titles[3]}</p>
-                                <p>Recommendation: {recommendations[3]}</p>  
-                                <p>{votes[3]} people found this review funny.</p>
-                                <p className='review-text'>{reviews[3]}</p>   
+                                <h4>Game Title: {titles[3]}</h4>
+
+                                <h6>Recommendation: {recommendations[3]}</h6>  
+                                <h6>{votes[3]} people found this review funny.</h6>
+                                <br />
+
+                                <p className='review-text'>{reviews[3]}</p>  
+                                <br />
+ 
                         </div>
                  </div>          
             </div>

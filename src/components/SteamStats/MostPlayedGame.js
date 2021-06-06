@@ -122,6 +122,13 @@ export default function MostPlayedGame() {
                         />
                     </div>
                 )}
+                <p style={
+                    {width: '50%', 
+                    margin: 'auto', 
+                    textAlign: 'center', 
+                    color: 'grey'}}>
+                        Data is categorized by the top 5, 10, or 15 most played games by the total number of hours played on Steam.
+                </p>
             </div>
         </div>
     );
