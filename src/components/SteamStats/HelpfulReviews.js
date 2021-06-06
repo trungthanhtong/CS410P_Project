@@ -18,17 +18,19 @@ export default function BestReviews() {
        dispatch(getMostHelpfulReviews(limit))
     }, [dispatch, limit]);
 
-
+    // Lists for each relevant field
     const titles = [];
     const recommendations = [];
     const votes = [];
     const reviews = [];
 
+    // Append info for top four most helpful review
     for (const [key, value] of Object.entries(mostHelpfulReviews)) {
         titles.push(value.title);
         recommendations.push(value.recommendation);
         votes.push(value.helpful);
         let review = value.review;
+        //replaces some common characters for better formatting
         review = review.replace(/&gt/g, "\n>");
         review = review.replace(/&amp/g, "&");
         /*
