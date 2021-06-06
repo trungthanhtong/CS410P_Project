@@ -36,6 +36,7 @@ export default class About extends Component{
                 >
                     Start Tutorial
                 </button>
+                {/*Button to render the tutorial component */}
     
             </div>
         );

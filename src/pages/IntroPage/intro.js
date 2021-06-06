@@ -23,6 +23,7 @@ export default class intro extends Component{
         tutor: false,
         news: false,
     }
+    {/*This state decides which component is loaded to the screen in the landing page*/}
 
     constructor(props){
         super(props)
@@ -30,6 +31,7 @@ export default class intro extends Component{
         this.handler = this.handler.bind(this);
   
     }
+    {/*Contructor and binding a function so I can pass it to the child */}
 
     handler(arg) {
 
@@ -83,7 +85,7 @@ export default class intro extends Component{
 
 
     }
-
+    {/*this function alone decide which component to be displayed, the navbar will control the majority of the function and some other childs */}
 
 
     render(){
@@ -117,6 +119,7 @@ export default class intro extends Component{
                                 {this.state.about === true && <About action={this.handler}/>}
                                 {this.state.contact === true && <Contact/>}
                                 {this.state.news === true && <News/>}
+                                {/*this part check which state is true and renders that component */}
                                 
                                 
                         
@@ -134,3 +137,4 @@ export default class intro extends Component{
 
     }
 }
+{/*this.handler is to pass the handler function to the child so that they could use it */}

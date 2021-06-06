@@ -21,6 +21,8 @@ export default class Tutorial extends Component{
         t4: false,
         side: "Most Played Game",
     }
+    {/*states to check which part of the tutorial is render in the tutorial page */}
+    {/*since there is only one tutorial component, the tutorial will be render part by part */}
 
     constructor(props){
         super(props)
@@ -41,19 +43,27 @@ export default class Tutorial extends Component{
             db_left: arg,
         });
     }
+    {/*function for the dropbox tutorial for the left dropbox, it changes the state to whatever the selection in the dropbox is chosen */}
+    {/*db = dropbox */}
+
 
     db_rights(arg){
         this.setState({
             db_right: arg,
         });
     }
+    {/*function for the dropbox tutorial for the right dropbox, it changes the state to whatever the selection in the dropbox is chosen */}
+    {/*db = dropbox */}
 
     side(arg){
         this.setState({
             side: arg,
         });
     }
+    {/*function for nav bar tutorial, it changes the state to whichever value of the most recently click navbar */}
 
+
+    {/*FROM HERE __________________________ */}
     t1(){
         this.setState({
             t1: false,
@@ -88,6 +98,11 @@ export default class Tutorial extends Component{
             t4: true,
         });
     }
+    {/*TO HERE________________________________ */}
+    {/*function to switch state to the next part of the tutorial*/}
+    {/*the "p" is function to go back to the previous states, hence previous part of the tutorial page */}
+
+
 
     again(){
         this.setState({
@@ -95,6 +110,7 @@ export default class Tutorial extends Component{
             t1: true,
         });
     }
+    {/*function to reset the state to the initial tutorial component state */}
 
     render(){
 

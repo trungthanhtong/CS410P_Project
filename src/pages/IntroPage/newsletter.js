@@ -70,9 +70,12 @@ export default function News() {
                 'success'
               )
               resetBtn.current.click();
+              {/*reset form ipon valid submission */}
         }
         
     };
+    {/* reusing of the contact form component stuff */}
+
 
     return (
         <form>
@@ -103,6 +106,7 @@ export default function News() {
                     const newValues = {...state.values, message: ''};
                         setState({...state, values: newValues})
                 }}
+                {/*reset form */}
             >
                 Reset
             </button>
