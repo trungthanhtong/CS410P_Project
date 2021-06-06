@@ -24,7 +24,7 @@ export default class Footer extends Component{
                         <button
                             class="btn btn-outline-success mt-2 footer-bt2"
                             onClick={() => this.props.action(4)} 
-                            {/* render tutorial page upon click */}
+                            /* render tutorial page upon click */
                         >
                         Subscribe to us
                         </button>

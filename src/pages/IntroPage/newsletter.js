@@ -70,7 +70,6 @@ export default function News() {
                 'success'
               )
               resetBtn.current.click();
-              {/*reset form ipon valid submission */}
         }
         
     };
@@ -106,7 +105,7 @@ export default function News() {
                     const newValues = {...state.values, message: ''};
                         setState({...state, values: newValues})
                 }}
-                {/*reset form */}
+                
             >
                 Reset
             </button>

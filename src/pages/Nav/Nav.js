@@ -8,7 +8,7 @@ import "../../css/landingPage.css";
 export default class Nav extends Component{
 
 
-{/*just a simple navigation component, */}
+/*just a simple navigation component, */
 
 
     render(){
